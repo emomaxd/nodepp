@@ -17,7 +17,7 @@ int main() {
         flog::warn("This is a warning for /hello");        // Warning flog
         flog::error("An error occurred while processing /hello"); // Error flog
         flog::critical("Critical issue in /hello!");      // Critical log
-        
+
         res.send("Hello, World!");
     });
 
@@ -26,7 +26,7 @@ int main() {
     });
 
     app.listen(8080, []() {
-        std::cout << "Server started." << std::endl;
+        flog::info("Server started.");
     });
 
     return 0;
